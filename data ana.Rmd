@@ -1,0 +1,47 @@
+---
+title: "Data Analysis"
+output: html_notebook
+---
+
+Good Data Analysis Requires Choosing The **Proper Technique(s)**
+
+Need to consider
+- The purpose of the analysis
+- The type of variable being analyzed (Numerical or Categorical)
+- The assumptions about the variable you are willing to make
+
+
+# Numerical Variables
+Do you seek to:
+
+- Describe the characteristics of the variable (possibly broken into several groups)?
+- Reach conclusions about the mean and standard deviation of the variable in a population?
+- Determine whether the mean and standard deviation of the variable differs depending on the group?
+- Determine which factors affect the value of the variable?
+- Predict the value of the variable based on the value of other variables?
+- Determine whether the values of the variable are stable over time?
+
+Develop **tables** and **charts** and compute descriptive **statistics** to describe the variable's characteristics:
+
+- Stem-and-leaf display `stem()`, histogram`hist()`, boxplot `boxplot()`, normal probability plot `qqnorm(), qqline()`# Normal QQ-Plot with straight line added
+`plot()`, `shapiro.test() `
+
+- Mean `mean(x)`, median `median(x)`, mode `library(DescTools), Mode()`, quartiles `quantile(x,p)`, range `range()`, interquartile range, standard deviation `sd()`, variance `var()`, and coefficient of variation `100*sd(x)/mean(x)`
+
+- Shapiro-Wilk Test –Used to test for normality
+
+# Categorical Variables
+Do you seek to:
+
+- Describe the proportion of items of interest in each category (possibly broken into several groups)?
+- Reach conclusions about the proportion of items of interest in a population?
+- Determine whether the proportion of items of interest differs depending on the group?
+- Predict the proportion of items of interest based on the value of other variables?
+- Determine whether the proportion of items of interest is stable over time?
+
+Describe The Proportion Of Items Of Interest In Each Category
+
+1. Summary tables
+- Frequency Tabulation `table(x)`, Relative Frequencies `table(x)/sum(table(x))`, Frequency Cross-tabulation `table(x,y)`, Row Marginal totals for x  `margin.table(table(x,y),1)`, Column totals for y `margin.table(table(x,y),2)`,Relative Freq Cross-table `table(x,y)/sum(table(x,y))`
+2. Charts: Bar chart `barplot()`, Pie chart `pie()`, Side-by-side bar charts
+
