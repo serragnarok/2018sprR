@@ -1,0 +1,57 @@
+---
+title: "Homework1 - 飛機誤點"
+output:
+  html_document:
+    df_print: paged
+  html_notebook: default
+  pdf_document: default
+---
+The U.S. Department of Transportation's (DOT) Bureau of Transportation Statistics tracks the on-time performance of domestic flights operated by large air carriers. Summary information on the number of on-time, delayed, canceled, and diverted flights is published in DOT's monthly Air Travel Consumer Report  https://transtats.bts.gov/Fields.asp
+
+
+#繳交期限：2018.3.9~2018.3.25晚上11點
+
+#目的：
+從數據中提出你認為可能有趣的問題，分析結果沒有你期望的有趣也沒關係，花點時間思考一下數據和變數。閱讀網頁 
+上的資料介紹，考慮此資料是否能夠回答你的問題，或者是否需要輔助/附加其他數據。可自行增加需要變數及資料。 
+
+- 分析數據並以可說服人的方式顯示結果以回答問題。 
+- 試著想想創造性和創新的方式來展示數據的有趣。 
+- 花時間設計和組織有效的視覺展示。
+
+#資料：
+資料 *airline_delay.csv* 為DOT網頁上2017年1月及12月 加州及紐約以下幾個機場SMF (Sacramento), SFO (San Francisco), LAX (Los Angeles International), JFK (John F. Kennedy, New York)的航班資料。你可以只針對其中幾個機場分析或全部。
+
+#Variable:
+DOT網頁內有詳盡介紹
+
+- **YEAR** 2017        
+- **MONTH** 1, 12         
+- **DAY_OF_WEEK** 星期幾的飛機
+- **FL_DATE** 哪天的飛機yyyymmdd     
+- **CARRIER** 航空公司代號      
+- **FL_NUM**  飛機號碼     
+- **ORIGIN**  出發機場      
+- **DEST**    到達機場     
+- **ARR_DELAY** 預定到達時間-真實到達時間。提早到的為-號.    
+- **CANCELLED** 班機是否取消 Indicator (1=Yes）    
+- **AIR_TIME**  航行時間 in Minutes    
+- **DISTANCE** 兩機場間距離 (miles)    
+- **CARRIER_DELAY** Carrier Delay, in Minutes
+- **WEATHER_DELAY** Weather Delay, in Minutes
+
+
+#一些有趣問題例子：
+*強烈建議* 請發揮你的好奇心及創造力，自行思考問題。
+
+- 哪些機場有哪些出發航班？ 
+- 哪些飛機延遲？跟天氣有關嗎？
+- 班機時間是否跟地點有關？
+- 哪條航線/航班容易延遲？
+- 同條航線飛行時間是否有差？
+- 如果是你會選擇哪條航線飛行或哪家航空公司?
+- 如何減少延誤的機會？ 
+- 有哪天或星期幾特別不一樣嗎？
+
+#相關R codes：
+read.csv(), match(), which(), subset(), summary(), table(),  lapply(), sapply(), barplot(), boxplot(), plot(), ggplot(), and many more graphics functions. 
